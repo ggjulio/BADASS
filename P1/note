@@ -1,0 +1,27 @@
+add docker image to gns3 edit > Preferences... > Docker containers > new
+
+for router:
+	dans image list select routeur_$(USER):latest
+	Next >
+	Next >
+	dans Adapters set 2
+	Next >
+	Next >
+	Next >
+	Finish
+
+for host:
+	dans image list select host_$(USER):latest
+	Next >
+	Next >
+	Next >
+	Next >
+	Next >
+	Finish
+
+dans Browse all devices
+dans configuration de routeur_$(USER) set
+	category to routers and
+	Symbole Browse to route_switch_processor
+
+drag and drop routeur_$(USER) and host_$(USER) to the panel
