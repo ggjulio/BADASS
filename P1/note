@@ -1,3 +1,7 @@
+sudo docker build -f ./_niduches-2 -t niduches_router ./
+sudo docker build -f ./_niduches-2_host -t niduches_host ./
+
+
 add docker image to gns3 edit > Preferences... > Docker containers > new
 
 for router:
