@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
     curl https://raw.githubusercontent.com/GNS3/gns3-server/master/scripts/remote-install.sh > gns3-remote-install.sh
     bash gns3-remote-install.sh
     echo "wireshark-common wireshark-common/install-setuid boolean true" | sudo debconf-set-selections
-    sudo apt-get install -y gns3-gui
+    DEBIAN_FRONTEND=noninteractive sudo apt-get install -y gns3-gui
     echo "gns3 installed."
   SHELL
 
