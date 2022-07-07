@@ -6,12 +6,16 @@ Vagrant.configure("2") do |config|
     vb.cpus = 2
     vb.memory = 4096
     vb.gui = true
+    vb.customize ['modifyvm', :id, '--clipboard-mode', 'bidirectional']
+    vb.customize ['modifyvm', :id, '--draganddrop', 'bidirectional']
+    vb.customize ["modifyvm", :id, "--vram", "128"]
   end
 
+  config.vm.synced_folder ".", "/home/vagrant/Desktop/badass", type: "virtualbox"
   config.vm.provision "shell", inline: <<-SHELL
     set -ex
     sudo apt-get update
-    sudo apt-get install -y gdm3
+    sudo apt-get install -y gdm3 ubuntu-desktop-minimal
     echo "gdm3 installed."
     cd /tmp
     curl https://raw.githubusercontent.com/GNS3/gns3-server/master/scripts/remote-install.sh > gns3-remote-install.sh
