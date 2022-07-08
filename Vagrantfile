@@ -25,6 +25,11 @@ Vagrant.configure("2") do |config|
     echo "gns3 installed."
   SHELL
 
+  config.vm.provision "shell", privileged: false,  inline: <<-SHELL
+    gsettings set org.gnome.shell favorite-apps "$(gsettings get org.gnome.shell favorite-apps | sed s/.$//), 'gns3.desktop', 'wireshark.desktop']"
+    echo "gns3 and wireskark added to favorites."
+  SHELL
+  
   config.vm.provision :reload
 
 end
