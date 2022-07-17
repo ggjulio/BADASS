@@ -1,12 +1,32 @@
-#get latest image of frrouting build with alpine with busybox
-FROM frrouting/frr:latest
+#
+# This is a sample network config, please uncomment lines to configure the network
+#
 
-# Setting the daemons to run
-ENV DAEMONS="zebra bgpd ospfd isisd"
+# Uncomment this line to load custom interface files
+# source /etc/network/interfaces.d/*
 
-# set bgpd
-RUN sed --in-place -e 's/bgpd=no/bgpd=yes/g' \
-# set ospdf
-    -e 's/ospfd=no/ospfd=yes/g' \
-# set IS-IS
-    -e 's/isisd=no/isisd=yes/g' /etc/frr/daemons
+# Static config for eth0
+#auto eth0
+#iface eth0 inet static
+#	address 192.168.0.2
+#	netmask 255.255.255.0
+#	gateway 192.168.0.1
+#	up echo nameserver 192.168.0.1 > /etc/resolv.conf
+
+# DHCP config for eth0
+#auto eth0
+#iface eth0 inet dhcp
+#	hostname routeur_niduches-1
+
+# Static config for eth1
+#auto eth1
+#iface eth1 inet static
+#	address 192.168.1.2
+#	netmask 255.255.255.0
+#	gateway 192.168.1.1
+#	up echo nameserver 192.168.1.1 > /etc/resolv.conf
+
+# DHCP config for eth1
+#auto eth1
+#iface eth1 inet dhcp
+#	hostname routeur_niduches-1

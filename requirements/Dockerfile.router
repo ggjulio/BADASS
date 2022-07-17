@@ -1,0 +1,12 @@
+#get latest image of frrouting build with alpine with busybox
+FROM frrouting/frr:v8.2.2
+
+# Setting the daemons to run
+ENV DAEMONS="zebra bgpd ospfd isisd"
+
+# set bgpd
+RUN sed --in-place -e 's/bgpd=no/bgpd=yes/g' \
+# set ospdf
+    -e 's/ospfd=no/ospfd=yes/g' \
+# set IS-IS
+    -e 's/isisd=no/isisd=yes/g' /etc/frr/daemons

@@ -34,9 +34,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision :reload
     
   config.vm.provision "shell", name: "Setting up badass", privileged: false,  inline: <<-SHELL
-    cd ~/Desktop/badass/P1
-    sudo docker build -f ./_niduches-2 -t routeur_niduches ./
-    sudo docker build -f ./_niduches-1_host -t host_niduches ./
+    cd ~/Desktop/badass/requirements
+    sudo docker build -f ./Dockerfile.router -t badass.router ./
 
   SHELL
 
