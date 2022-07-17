@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.synced_folder ".", "/home/vagrant/Desktop/badass", type: "virtualbox"
-  config.vm.provision "shell", privileged: false,  inline: <<-SHELL
+  config.vm.provision "shell", name: "Setting up VM", privileged: false,  inline: <<-SHELL
     set -ex
     sudo add-apt-repository -y ppa:gns3/ppa
     sudo apt-get update
@@ -32,5 +32,12 @@ Vagrant.configure("2") do |config|
   SHELL
   
   config.vm.provision :reload
+    
+  config.vm.provision "shell", name: "Setting up badass", privileged: false,  inline: <<-SHELL
+    cd ~/Desktop/badass/P1
+    sudo docker build -f ./_niduches-2 -t niduches_router ./
+    sudo docker build -f ./_niduches-1_host -t niduches_host ./
+
+  SHELL
 
 end
