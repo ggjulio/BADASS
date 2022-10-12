@@ -24,3 +24,6 @@ vagrant up
 ```
 Then, just wait for the command to end.  
 (it can take quite some time, installing ubuntu desktop and gns3 requirements...)
+
+ressources:
+- https://www.youtube.com/watch?v=80RFILipeng
