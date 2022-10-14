@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
   config.vagrant.plugins = "vagrant-reload"
 
   config.vm.provider "virtualbox" do |vb|    
-    vb.cpus = 4
+    vb.cpus = 2
     vb.memory = 4096
     vb.gui = true
     vb.customize ['modifyvm', :id, '--clipboard-mode', 'bidirectional']
