@@ -36,6 +36,9 @@ Ressources:
 - [ubuntu - man /etc/network/interfaces - interfaces-tunnel](https://manpages.ubuntu.com/manpages/jammy/en/man5/interfaces-tunnel.5.html)
 - [ubuntu - man ifup](https://man.developpez.com/man8/ifup/)
 - [ubuntu - man ifup + ifdown](https://manpages.debian.org/buster/ifupdown/interfaces.5.en.html)
+- [man ip](https://man7.org/linux/man-pages/man8/ip.8.html)
+- [man ip-address](https://man7.org/linux/man-pages/man8/ip-address.8.html)
+
 - https://networktechstudy.com/home/cumulus-vxlan
 - [linux bridge explained](https://www.youtube.com/watch?v=oVu0O0UMBCc)
 - [Linux bridge again](https://www.youtube.com/watch?v=T1twNsZojgI)
