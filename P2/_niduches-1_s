@@ -1,1 +1,23 @@
-# todo
+# /etc/network/interfaces
+# Host: router_niduches-1
+# Unicast
+
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+	address 10.1.1.1
+	netmask 255.255.255.0
+
+auto vxlan10
+iface vxlan10 inet manual
+	use vxlan
+	vxlan-id 10
+	vxlan-local-ip 10.0.0.1
+	vxlan-remote-ip 10.0.0.2
+
+auto br0
+iface br0 inet manual
+	use bridge
+	bridge-ports eth0
+	adress 20.1.1.1/24
+	up /sbin/echo ok
