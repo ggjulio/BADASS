@@ -34,6 +34,7 @@ Ressources:
 - [ubuntu - man /etc/network/interfaces - interfaces-bridge](https://manpages.ubuntu.com/manpages/jammy/en/man5/interfaces-bridge.5.html)
 - [ubuntu - man /etc/network/interfaces - ip-link](https://manpages.ubuntu.com/manpages/jammy/en/man8/ip-link.8.html)
 - [ubuntu - man /etc/network/interfaces - interfaces-tunnel](https://manpages.ubuntu.com/manpages/jammy/en/man5/interfaces-tunnel.5.html)
+- [example advanced interfaces file](https://gist.github.com/shane-c/1f3600c6f3099e6b4b60)
 - [ubuntu - man ifup](https://man.developpez.com/man8/ifup/)
 - [ubuntu - man ifup + ifdown](https://manpages.debian.org/buster/ifupdown/interfaces.5.en.html)
 - [man ip](https://man7.org/linux/man-pages/man8/ip.8.html)
