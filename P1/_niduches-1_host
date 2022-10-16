@@ -1,2 +1,0 @@
-#get latest image of alpine with busybox
-FROM alpine:latest

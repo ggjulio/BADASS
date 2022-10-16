@@ -1,5 +1,5 @@
 #get latest image of frrouting build with alpine with busybox
-FROM frrouting/frr:latest
+FROM frrouting/frr:v8.2.2
 
 # Setting the daemons to run
 ENV DAEMONS="zebra bgpd ospfd isisd"
